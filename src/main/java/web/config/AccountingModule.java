@@ -23,7 +23,6 @@ public class AccountingModule extends AbstractModule {
     bind(UserRepository.class).to(PersistentUserRepository.class);
     bind(SessionRepository.class).to(PersistentSessionRepository.class);
 
-
   }
 
 }
