@@ -1,12 +1,12 @@
-package com.orangelit.javawebtemplate.web.config;
+package web.config;
 
 import com.google.inject.AbstractModule;
-import com.orangelit.javawebtemplate.application.*;
-import com.orangelit.javawebtemplate.domain.authentication.SessionRepository;
-import com.orangelit.javawebtemplate.domain.authentication.UserRepository;
-import com.orangelit.javawebtemplate.infrastructure.DBSetup;
-import com.orangelit.javawebtemplate.infrastructure.auth.PersistentSessionRepository;
-import com.orangelit.javawebtemplate.infrastructure.auth.PersistentUserRepository;
+import application.*;
+import domain.authentication.SessionRepository;
+import domain.authentication.UserRepository;
+import infrastructure.DBSetup;
+import infrastructure.auth.PersistentSessionRepository;
+import infrastructure.auth.PersistentUserRepository;
 
 /**
  * @author kkinnebrew

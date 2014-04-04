@@ -1,9 +1,9 @@
-package com.orangelit.javawebtemplate.infrastructure.auth;
+package infrastructure.auth;
 
 import com.google.inject.Inject;
-import com.orangelit.javawebtemplate.application.exceptions.NotFoundException;
-import com.orangelit.javawebtemplate.domain.authentication.Session;
-import com.orangelit.javawebtemplate.domain.authentication.SessionRepository;
+import application.exceptions.NotFoundException;
+import domain.authentication.Session;
+import domain.authentication.SessionRepository;
 
 import javax.persistence.EntityManager;
 import javax.persistence.Query;

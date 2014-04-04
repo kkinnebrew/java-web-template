@@ -1,11 +1,11 @@
-package com.orangelit.javawebtemplate.web.config;
+package web.config;
 
 import com.google.inject.Guice;
 import com.google.inject.Injector;
 import com.google.inject.persist.jpa.JpaPersistModule;
 import com.google.inject.servlet.GuiceServletContextListener;
 import com.google.sitebricks.SitebricksModule;
-import com.orangelit.javawebtemplate.web.apis.*;
+import web.apis.*;
 
 /**
  * @author kkinnebrew

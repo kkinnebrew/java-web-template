@@ -1,4 +1,4 @@
-package com.orangelit.javawebtemplate.domain.authentication;
+package domain.authentication;
 
 /*
  * Password Hashing With PBKDF2 (http://crackstation.net/hashing-security.htm).

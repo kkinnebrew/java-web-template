@@ -1,6 +1,6 @@
-package com.orangelit.javawebtemplate.common;
+package common;
 
-import com.orangelit.javawebtemplate.application.exceptions.InvalidInputException;
+import application.exceptions.InvalidInputException;
 
 import java.math.BigDecimal;
 

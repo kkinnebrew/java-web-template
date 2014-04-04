@@ -1,7 +1,7 @@
-package com.orangelit.javawebtemplate.domain.authentication;
+package domain.authentication;
 
-import com.orangelit.javawebtemplate.application.exceptions.InvalidInputException;
-import com.orangelit.javawebtemplate.common.Validate;
+import application.exceptions.InvalidInputException;
+import common.Validate;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;

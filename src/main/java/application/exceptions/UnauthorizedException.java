@@ -1,4 +1,4 @@
-package com.orangelit.javawebtemplate.application.exceptions;
+package application.exceptions;
 
 /**
  * @author kkinnebrew

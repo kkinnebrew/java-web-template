@@ -1,4 +1,4 @@
-package com.orangelit.javawebtemplate.web.config;
+package web.config;
 
 import com.google.inject.Inject;
 import com.google.inject.Singleton;

@@ -1,6 +1,6 @@
-package com.orangelit.javawebtemplate.domain.authentication;
+package domain.authentication;
 
-import com.orangelit.javawebtemplate.application.exceptions.NotFoundException;
+import application.exceptions.NotFoundException;
 
 import java.util.List;
 

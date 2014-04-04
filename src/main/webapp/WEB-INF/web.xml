@@ -13,7 +13,7 @@
   </filter-mapping>
 
   <listener>
-    <listener-class>com.orangelit.javawebtemplate.web.config.AppConfig</listener-class>
+    <listener-class>web.config.AppConfig</listener-class>
   </listener>
 
 </web-app>

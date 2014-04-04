@@ -1,9 +1,9 @@
-package com.orangelit.javawebtemplate.infrastructure;
+package infrastructure;
 
 import com.google.inject.Inject;
 import com.google.inject.persist.Transactional;
-import com.orangelit.javawebtemplate.application.AuthenticationService;
-import com.orangelit.javawebtemplate.domain.authentication.Session;
+import application.AuthenticationService;
+import domain.authentication.Session;
 
 /**
  * @author kkinnebrew

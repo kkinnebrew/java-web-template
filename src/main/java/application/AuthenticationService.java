@@ -1,10 +1,10 @@
-package com.orangelit.javawebtemplate.application;
+package application;
 
-import com.orangelit.javawebtemplate.application.exceptions.InvalidInputException;
-import com.orangelit.javawebtemplate.application.exceptions.NotFoundException;
-import com.orangelit.javawebtemplate.application.exceptions.UnauthorizedException;
-import com.orangelit.javawebtemplate.domain.authentication.Session;
-import com.orangelit.javawebtemplate.domain.authentication.User;
+import application.exceptions.InvalidInputException;
+import application.exceptions.NotFoundException;
+import application.exceptions.UnauthorizedException;
+import domain.authentication.Session;
+import domain.authentication.User;
 
 import java.util.List;
 

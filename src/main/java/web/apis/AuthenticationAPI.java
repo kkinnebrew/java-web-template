@@ -1,4 +1,4 @@
-package com.orangelit.javawebtemplate.web.apis;
+package web.apis;
 
 import com.google.inject.Inject;
 import com.google.inject.persist.Transactional;
@@ -8,11 +8,11 @@ import com.google.sitebricks.headless.Reply;
 import com.google.sitebricks.headless.Request;
 import com.google.sitebricks.headless.Service;
 import com.google.sitebricks.http.Post;
-import com.orangelit.javawebtemplate.application.AuthenticationService;
-import com.orangelit.javawebtemplate.application.exceptions.InvalidInputException;
-import com.orangelit.javawebtemplate.application.exceptions.NotFoundException;
-import com.orangelit.javawebtemplate.application.exceptions.UnauthorizedException;
-import com.orangelit.javawebtemplate.domain.authentication.Session;
+import application.AuthenticationService;
+import application.exceptions.InvalidInputException;
+import application.exceptions.NotFoundException;
+import application.exceptions.UnauthorizedException;
+import domain.authentication.Session;
 
 import javax.servlet.http.HttpServletRequest;
 

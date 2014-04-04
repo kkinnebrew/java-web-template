@@ -1,11 +1,11 @@
-package com.orangelit.javawebtemplate.application;
+package application;
 
 import com.google.inject.Inject;
-import com.orangelit.javawebtemplate.application.exceptions.InvalidInputException;
-import com.orangelit.javawebtemplate.application.exceptions.NotFoundException;
-import com.orangelit.javawebtemplate.application.exceptions.UnauthorizedException;
-import com.orangelit.javawebtemplate.common.Validate;
-import com.orangelit.javawebtemplate.domain.authentication.*;
+import application.exceptions.InvalidInputException;
+import application.exceptions.NotFoundException;
+import application.exceptions.UnauthorizedException;
+import common.Validate;
+import domain.authentication.*;
 import org.apache.commons.lang.StringUtils;
 
 import java.util.ArrayList;
