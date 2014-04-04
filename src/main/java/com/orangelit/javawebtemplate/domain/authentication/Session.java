@@ -70,7 +70,7 @@ public class Session {
   }
 
   public Boolean isExpired() {
-    return (new Date()).compareTo(expires) < 0;
+    return (new Date()).compareTo(expires) > 0;
   }
 
   public void updateExpiration() {
