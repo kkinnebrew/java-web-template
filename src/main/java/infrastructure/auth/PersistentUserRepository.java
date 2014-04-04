@@ -6,6 +6,7 @@ import domain.authentication.User;
 import domain.authentication.UserRepository;
 
 import javax.persistence.EntityManager;
+import javax.persistence.PersistenceException;
 import javax.persistence.Query;
 import java.util.LinkedList;
 import java.util.List;

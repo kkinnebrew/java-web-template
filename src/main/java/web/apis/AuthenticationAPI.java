@@ -1,7 +1,6 @@
 package web.apis;
 
 import com.google.inject.Inject;
-import com.google.inject.persist.Transactional;
 import com.google.sitebricks.At;
 import com.google.sitebricks.client.transport.Json;
 import com.google.sitebricks.headless.Reply;
@@ -38,7 +37,6 @@ public class AuthenticationAPI {
 
   @At("/register")
   @Post
-  @Transactional
   public Reply register(Request request) {
     String firstName = request.param("firstName");
     String lastName = request.param("lastName");
@@ -61,7 +59,6 @@ public class AuthenticationAPI {
 
   @At("/login")
   @Post
-  @Transactional
   public Reply login(Request request) {
     String email = request.param("email");
     String password = request.param("password");
@@ -80,7 +77,6 @@ public class AuthenticationAPI {
 
   @At("/validate")
   @Post
-  @Transactional
   public Reply validate(Request request) {
     String token = request.param("token");
     String hostname = httpServletRequest.getRemoteHost();
@@ -98,7 +94,6 @@ public class AuthenticationAPI {
 
   @At("/disable")
   @Post
-  @Transactional
   public Reply disable(Request request) {
     String email = request.param("email");
     String password = request.param("password");
@@ -116,7 +111,6 @@ public class AuthenticationAPI {
 
   @At("/logout")
   @Post
-  @Transactional
   public Reply logout(Request request) {
     String token = request.param("token");
     try {

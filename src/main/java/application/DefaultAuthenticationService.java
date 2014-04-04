@@ -4,6 +4,7 @@ import com.google.inject.Inject;
 import application.exceptions.InvalidInputException;
 import application.exceptions.NotFoundException;
 import application.exceptions.UnauthorizedException;
+import com.google.inject.persist.Transactional;
 import common.Validate;
 import domain.authentication.*;
 import org.apache.commons.lang.StringUtils;
@@ -31,6 +32,7 @@ public class DefaultAuthenticationService implements AuthenticationService {
   }
 
   @Override
+  @Transactional
   public Session register(String firstName, String lastName, String email, String password, String hostname)
       throws InvalidInputException, NotFoundException {
     User user = new User(firstName, lastName, email, password, true, false);
@@ -41,6 +43,7 @@ public class DefaultAuthenticationService implements AuthenticationService {
   }
 
   @Override
+  @Transactional
   public String login(String email, String password, String hostname)
       throws InvalidInputException, NotFoundException, UnauthorizedException {
     Validate.notNullOrWhitespace(password, "Password is required");
@@ -54,6 +57,7 @@ public class DefaultAuthenticationService implements AuthenticationService {
   }
 
   @Override
+  @Transactional
   public Boolean validate(String token, String hostname)
       throws InvalidInputException, NotFoundException, UnauthorizedException {
     Session session = sessionRepository.find(token);
@@ -67,12 +71,14 @@ public class DefaultAuthenticationService implements AuthenticationService {
   }
 
   @Override
+  @Transactional
   public void logout(String token) throws NotFoundException {
     Session session = sessionRepository.find(token);
     sessionRepository.remove(session);
   }
 
   @Override
+  @Transactional
   public void disable(String email, String password)
       throws InvalidInputException, NotFoundException, UnauthorizedException {
     User user = userRepository.findByEmail(email);

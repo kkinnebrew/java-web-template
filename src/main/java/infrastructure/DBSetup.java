@@ -20,7 +20,9 @@ public class DBSetup {
 
   @Transactional
   public void run() throws Exception {
-    Session session = authenticationService.register("Kevin", "Kinnebrew", "kevin.kinnebrew@gmail.com", "test",
+    Session session1 = authenticationService.register("Kevin", "Kinnebrew", "kevin.kinnebrew@gmail.com", "test",
+        "0.0.0.0");
+    Session session2 = authenticationService.register("Mindy", "Cruz", "mindy.cruz@gmail.com", "test",
         "0.0.0.0");
   }
 
