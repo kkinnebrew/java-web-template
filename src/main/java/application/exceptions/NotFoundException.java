@@ -6,7 +6,7 @@ import java.text.MessageFormat;
 /**
  * @author kkinnebrew
  */
-public class NotFoundException extends Exception {
+public class NotFoundException extends RuntimeException {
 
   public NotFoundException(Type type, String id) {
     this(MessageFormat.format("{0} not found with identifier: {1}", type.toString(), id));

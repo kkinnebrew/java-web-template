@@ -6,7 +6,6 @@ import domain.authentication.User;
 import domain.authentication.UserRepository;
 
 import javax.persistence.EntityManager;
-import javax.persistence.PersistenceException;
 import javax.persistence.Query;
 import java.util.LinkedList;
 import java.util.List;
@@ -29,6 +28,20 @@ public class PersistentUserRepository implements UserRepository {
   @Override
   public List<User> select() {
     Query query = entityManager.createNativeQuery("select * from Users", User.class);
+    List results = query.getResultList();
+    List<User> users = new LinkedList<>();
+    for (Object entity : results) {
+      users.add((User) entity);
+    }
+    return users;
+  }
+
+  @Override
+  public List<User> search(final String keyword) {
+    Query query = entityManager.createNativeQuery("select * from Users WHERE email LIKE %?% OR firstName LIKE ?% OR lastName LIKE ?% LIMIT 5", User.class);
+    query.setParameter((int)1, keyword);
+    query.setParameter((int)2, keyword);
+    query.setParameter((int)3, keyword);
     List results = query.getResultList();
     List<User> users = new LinkedList<>();
     for (Object entity : results) {

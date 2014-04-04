@@ -11,6 +11,8 @@ public interface UserRepository {
 
   List<User> select();
 
+  List<User> search(String keyword);
+
   User find(String userId) throws NotFoundException;
 
   User findByEmail(String email) throws NotFoundException;
